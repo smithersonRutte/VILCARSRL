@@ -1,0 +1,17 @@
+USE inventario;
+go
+CREATE PROCEDURE S_P_REGISTRAR PRODUCTO
+@categoria nvarchar(50),
+@nombre nvarchar (50),
+@descripcion nvarchara(100),
+@stock int,
+@precioCompra double(7,2),
+@precioVenta double(7,2),
+@imagen image
+
+AS
+ SET NOCOUNT ON;
+ Insert into tblProductos (@nombre,@descripcion,@stock,
+ @precioCompra,@precioVenta,@imagen)
+
+GO
